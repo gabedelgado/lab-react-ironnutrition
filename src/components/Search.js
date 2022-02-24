@@ -5,12 +5,10 @@ function Search({searchInput, setSearchInput}) {
   
   
     return (
-    <>
+    <div>
       <Divider>Search</Divider>
-
-      <label>Search</label>
-      <Input value={searchInput} type="text" onChange={(e) => setSearchInput(e.target.value)} />
-    </>
+      <Input className='inputs' value={searchInput} type="text" onChange={(e) => setSearchInput(e.target.value)} />
+    </div>
   );
 }
 

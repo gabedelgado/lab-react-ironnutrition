@@ -13,6 +13,27 @@
   }
 }
 
+.everythingDiv {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto
+}
+
+.inputs {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.foodEntryDiv {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -26,6 +47,15 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.showHideButton {
+  margin: 20px
+}
+
+.noResultsDiv {
+  margin: auto;
+  margin-top: 30px
 }
 
 @keyframes App-logo-spin {
