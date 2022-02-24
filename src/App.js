@@ -11,9 +11,14 @@ function App() {
   const [viewFoods, setViewFoods] = React.useState(foods.slice(Math.floor(foods.length / 2)))
   const [searchInput, setSearchInput] = React.useState("")
   const [showAddFoodForm, setShowAddFoodForm] = React.useState(false)
+  const [filteredFoods, setFilteredFoods] = React.useState(viewFoods)
 
-  let searchRegex = searchInput === ""  ? new RegExp('.+') : new RegExp(searchInput, "i") 
-  let filteredFoods = viewFoods.filter(food => food.name.match(searchRegex))
+  React.useEffect(() => {
+    let searchRegex = searchInput === ""  ? new RegExp('.+') : new RegExp(searchInput, "i") 
+    setFilteredFoods(viewFoods.filter(food => food.name.match(searchRegex)))
+  }, [searchInput, viewFoods])
+  
+
   return (
     <div className="App">      
       <div className="everythingDiv">
